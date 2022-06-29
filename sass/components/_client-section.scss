@@ -1,0 +1,32 @@
+.client__list {
+    display: flex;
+}
+
+.client__link {
+    width: 170px;
+    height: 92px;
+
+    @extend %flex-centered;
+
+    @extend %bordered;
+    border-color: getColor("svg");
+    color: getColor("svg");
+    
+    @include transition(color, background-color);
+
+
+    &:hover,
+    &:focus {
+    color: getColor("attention");
+    border-color: getColor("attention");
+}
+}
+
+.client__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.client__icon {
+    fill: currentColor;  
+}
+

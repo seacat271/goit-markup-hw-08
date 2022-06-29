@@ -1,0 +1,18 @@
+
+$colors: (
+    "title": #212121,
+    "basic-background": #FFFFFF,
+    "basic": #757575,
+    "attention": #2196F3,
+    "logo": #000000,
+    "attention-background": #2F303A,
+    "second-background": #F5F4FA,
+    "border": #EEEEEE,
+    "svg": #AFB1B8,
+);
+
+@function getColor($key) {
+    @return map-get($colors, $key);
+  }
+
+

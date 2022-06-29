@@ -1,0 +1,24 @@
+.license__choice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+    width: 16px;
+    height: 15px;
+
+    background-color: white;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 4px;
+    border-color: #212121;
+}
+
+.license__icon-choice {
+    fill: white;
+}
+
+.license__input:checked + .license__choice {
+    border-color: blue;
+    background-color: blue;
+}

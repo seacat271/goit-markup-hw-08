@@ -1,0 +1,38 @@
+.specialization {
+    padding-top: 0;
+}
+
+.specialization__list {
+    display: flex;
+}
+
+.specialization__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.specialization__position {
+    position: relative;
+}
+
+.specialization__image {
+    display: block;
+}
+
+.specialization__text {
+    padding: 27px 0;
+    width: 100%;
+    height: 70px;
+    box-sizing: border-box;
+
+    position: absolute;
+    bottom: 0;
+    
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: getColor("basic-background");
+    background-color: rgba(47, 48, 58, 0.8);
+}

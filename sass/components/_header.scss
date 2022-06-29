@@ -1,0 +1,71 @@
+.header {
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #ECECEC;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__nav,
+.header__list {
+    display: flex;
+    align-items: center;
+}
+
+.header__item {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    &:not(:last-child) {
+        margin-right: 50px;
+    }
+}
+
+.header__item--dark {
+    position: relative;
+
+    color: getColor("title");
+}
+
+.header__item--current {
+    color: getColor("attention");
+
+    &::after {
+        width: 100%;
+        height: 4px;
+    
+        position: absolute;
+        bottom: -34px;
+        left: 0;
+        content: "";
+    
+        border-radius: 2px;
+        background-color: getColor("attention");
+    }
+}
+
+.header__icon {
+    margin-right: 10px;
+
+    fill: currentColor;
+}
+
+.header__link {
+    @include transition (color);
+
+    &:hover,
+    &:focus {
+        color: getColor("attention");
+    }    
+}
+
+

@@ -1,0 +1,22 @@
+.logo {
+    margin-right: 93px;
+
+    font-family: $secondary-font-fam;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.19;
+
+    color: getColor("logo");  
+}
+
+.logo__web {
+    color: getColor("attention");
+}
+
+
+.logo--darktheme {
+    color: getColor("basic-background");
+    margin-right: 0;
+    margin-bottom: 20px;
+    display: block;
+}
