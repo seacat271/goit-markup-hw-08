@@ -105,7 +105,8 @@
    
     width: 16px;
     height: 15px;
-    box-sizing: border-box;
+
+    // box-sizing: border-box;
     background-color: getColor("basic-background");
     border-radius: 2px;
     outline: getColor("title") 2px solid;
