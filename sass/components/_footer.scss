@@ -5,8 +5,47 @@
 }
 
 .footer__container {
-    display: flex;
-    justify-content: space-between;
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.footer__active {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-bottom: 60px;
+    }
+}
+
+.footer__address {
+    @media screen and (min-width: 1200px) {
+        margin-right: 70px;
+    }
+}
+
+.footer__address,
+.footer__network {
+    @media screen and (max-width: 767px) {
+        margin-bottom: 60px;
+    }
+}
+
+.footer__address,
+.footer__network,
+.footer__mail {
+    @media screen and (max-width: 1199px) {
+        text-align: center;
+    }
+}
+
+.footer__logo {
+    margin-bottom: 20px;
+    display: block;
 }
 
 .address {
@@ -14,55 +53,80 @@
 }
 
 .address__item {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 14px;
+  
     line-height: 1.71;
+
+    color: rgba(255, 255, 255, 0.6);
     
+    &:first-child {
+        color: getColor("basic-background");
+    }
+
     &:not(:last-child) {
-        margin-bottom: 10px;
+        margin-bottom: 8px;
     }
 }
 
 .address__link {
     @include transition (color);
 
-    &:hover,
-    &:focus {
-    color: getColor("attention");
+        &:hover,
+        &:focus {
+        color: getColor("attention");
+    }
 }
-}
-
-.address__link--light {
-    color: getColor("basic-background");
-}
-
-
 
 .footer__title {
     display: block;
     color: getColor("basic-background");
-    font-size: 14px;
+
     text-transform: uppercase;
-    line-height: 1.14;
+    line-height: 1.17;
     margin-bottom: 20px;
 }
 
-.footer__active {
-    padding-top: 12px;
-    display: flex; 
+.footer__network {
+    @media screen and (min-width: 768px) {
+        padding-top: 5px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 12px;
+    }
 }
 
-.footer__network {
-    margin-right: 93px;
+.footer__mail {
+    @media screen and (min-width: 1200px) {
+        padding-top: 12px;
+    }
 }
 
 .mail-form {
-    display: flex;
+    text-align: center;
+        @media screen and (min-width: 1200px) {
+        display: flex;
+    }
 }
 
 .mail-form__input {
-    margin-right: 12px;
-    width: 358px;
+
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 20px;
+    }
+    
+    @media screen and (min-width: 1200px) {
+        margin-right: 12px;
+        width: 358px;
+    }
+
+    width: 100%;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        width: 450px;
+        display: block;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
     height: 50px;
     padding: 15px 16px;
 
@@ -74,7 +138,6 @@
     @extend %bordered;
     border-color: rgba(255, 255, 255, 0.3);
    
-
     color: getColor("basic-background");
     background-color: transparent;
 
@@ -83,6 +146,72 @@
         color: rgba(255, 255, 255, 0.6);
     }
 }
+
+
+
+
+
+// .footer__container {
+//     display: flex;
+//     justify-content: center;
+// }
+
+
+
+
+
+
+// }
+
+// .address__link--light {
+//     color: getColor("basic-background");
+// }
+
+
+
+// .footer__title {
+//     display: block;
+//     color: getColor("basic-background");
+//     font-size: 14px;
+//     text-transform: uppercase;
+//     line-height: 1.14;
+//     margin-bottom: 20px;
+// }
+
+// .footer__active {
+//     padding-top: 12px;
+//     display: flex; 
+// }
+
+// .footer__network {
+//     margin-right: 93px;
+// }
+
+
+
+// .mail-form__input {
+//     margin-right: 12px;
+//     width: 358px;
+//     height: 50px;
+//     padding: 15px 16px;
+
+//     box-sizing: border-box;
+//     font-family: inherit;
+//     font-size: inherit;
+//     outline: none;
+   
+//     @extend %bordered;
+//     border-color: rgba(255, 255, 255, 0.3);
+   
+
+//     color: getColor("basic-background");
+//     background-color: transparent;
+
+//     &::placeholder {
+//         line-height: 1.25;
+//         color: rgba(255, 255, 255, 0.6);
+//     }
+// }
 
 
 

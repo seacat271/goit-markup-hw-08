@@ -1,22 +1,22 @@
 .logo {
-    margin-right: 93px;
 
     font-family: $secondary-font-fam;
-    font-size: 26px;
+    font-size: 24px;
+   
     font-weight: 700;
-    line-height: 1.19;
-
+    line-height: 1.38;
     color: getColor("logo");  
+
+    @media screen and (min-width: 1200px) {
+        font-size: 26px;
+        line-height: 1.19;
+    }
 }
 
 .logo__web {
     color: getColor("attention");
 }
 
-
 .logo--darktheme {
     color: getColor("basic-background");
-    margin-right: 0;
-    margin-bottom: 20px;
-    display: block;
 }

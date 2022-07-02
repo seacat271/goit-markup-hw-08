@@ -2,10 +2,12 @@ body {
     margin: 0;
 
     font-family: $main-font-fam;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     letter-spacing: 0.03em;
 
     color: getColor("basic");
     background-color: getColor("basic-background");
+
 }
+

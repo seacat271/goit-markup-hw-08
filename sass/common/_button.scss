@@ -2,6 +2,7 @@
     width: 200px;
     height: 50px;
 
+    font-size: 16px;
     font-weight: 700;
     line-height: 1.87;
     letter-spacing: 0.06em;
@@ -13,7 +14,7 @@
 }
 
 .button-submit--hero {
-
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
     @include transition (background-color, color);
 
@@ -27,6 +28,7 @@
 .button-submit--stylish {
 
    @extend %flex-centered;
+   display: inline-flex;
     
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
@@ -38,16 +40,10 @@
 .button-submit__icon {
     text-align: center;
     fill: currentColor;
-
 }
 
 .button-close {
-    width: 30px;
-    height: 30px;
-  
     position: absolute;
-    right: 8px;
-    top:8px;
    
     @extend %flex-centered;
 
@@ -66,8 +62,13 @@
     }
 }
 
+.button-close__hero {
+    width: 30px;
+    height: 30px;
 
-
+    right: 8px;
+    top:8px;
+}
 
 .button-close__svg {
     fill: currentColor;
@@ -79,25 +80,42 @@
 
 .radio-button {
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+    
+    @media screen and (max-width: 767px) {
+        flex-wrap: wrap;
+        row-gap: 15px;
+        column-gap: 8px;
+    }
+  
+    @media screen and (min-width: 768px) {
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 50px;
+    }
+
+    margin-bottom: 40px;
 }
 
 .radio-button__item:not(:last-child) {
-    margin-right: 8px;
+    @media screen and (min-width: 768px) {
+        margin-right: 8px;
+    }    
 }
-
 
 .radio-button__option {
     color: getColor("title");
     background-color: getColor("second-background");
+
+    font-size: 16px;
     font-weight: 500;
     line-height: 1.63;
     padding: 6px 22px;
     border-radius: 4px;
 
     @include transition(background-color, color, box-shadow);
-
 
     &:hover,
     &:focus {
@@ -107,6 +125,81 @@
                 0px 1px 2px rgba(0, 0, 0, 0.08), 
                 0px 2px 2px rgba(0, 0, 0, 0.12);
     }  
+
+}
+
+.button-menu {
+    width: 40px;
+    height: 40px;
+
+        @media screen and (min-width: 768px) {
+            display: none;
+    }
+}
+.button-menu__icon {
+    fill: getColor("logo");
+
+    .button-menu:hover & {
+        fill: getColor("attention");
+    }
+}
+
+.button-menu.is-open {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    z-index: 100;
+}
+
+.button-menu.is-open .button-menu__icon--close{
+    visibility: visible;
+    opacity: 1;
+    @include transition(visibility);
+}
+
+.button-menu.is-open .button-menu__icon--open{
+    visibility: hidden;
+    opacity: 0;
+    @include transition(visibility);
+}
+.button-menu .button-menu__icon--close {
+    visibility: hidden;
+    opacity: 0;
 }
 
 
+
+
+// .button-close__mobile-menu {
+//     width: 40px;
+//     height: 40px;
+
+//     right: 15px;
+//     top: 10px;
+// }
+
+// .button-close__mobile-menu--borderless {
+//     border: none;
+// }
+
+
+
+
+// .button-submit--hero {
+
+
+//     @include transition (background-color, color);
+
+//     &:hover,
+//     &:focus {
+//         color: getColor("attention");
+//         background-color: getColor("basic-background");
+//     }
+// }
+
+// .button-submit--stylish {
+
+//    @extend %flex-centered;
+    
+//     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+// }

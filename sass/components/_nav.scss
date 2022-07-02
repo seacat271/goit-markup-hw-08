@@ -1,0 +1,92 @@
+.nav__list {
+    // @media screen and (max-width: 767px) {
+    //     display: none;
+    // }
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    
+        @media screen and (min-width: 768px) {
+            font-size: 14px;
+            line-height: 1.14;
+            display: flex;
+            align-items: center;
+        
+        }
+
+
+
+
+   
+}
+
+.nav__item {
+
+     &:not(:last-child) {
+
+        @media screen and (max-width: 767px) {
+            margin-bottom: 32px;
+        }
+
+        @media screen and (min-width: 768px) {
+            margin-right: 50px;
+        }
+       
+    }
+}
+
+// .nav__item--mobile {
+
+
+//     &:not(:last-child) {
+//      
+//     }
+// }
+
+.nav__item--dark {
+    position: relative;
+
+    color: getColor("title");
+}
+
+.nav__item--current {
+    color: getColor("attention");
+
+    &::after {
+        @media screen and (min-width: 768px) {
+            width: 100%;
+            height: 4px;
+        
+            position: absolute;
+    
+            @media screen and (min-width: 768px) and (max-width: 1199px) {
+                bottom: -35px;
+            }
+    
+            @media screen and (min-width: 1200px) {
+                bottom: -33px;
+            }
+            
+            left: 0;
+            content: "";
+        
+            border-radius: 2px;
+            background-color: getColor("attention");
+        }
+    }
+}
+
+.nav__link {
+
+    &:hover,
+    &:focus {
+        @media screen and (min-width: 1200px){
+
+            @include transition (color);
+
+            color: getColor("attention");
+        }    
+    }
+}
+

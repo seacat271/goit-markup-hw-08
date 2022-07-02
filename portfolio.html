@@ -25,41 +25,51 @@
         <title lang="en">WebStudio</title>
     </head> 
     <body>
-        <header class="header">
-            <div class="header__container container">
-              <nav class="header__nav">
-                <a class="logo link" href="./" lang="en"><span class="logo__web">Web</span>Studio</a>
-                <ul class="header__list list">
-                  <li class="header__item header__item--dark">
-                    <a class="header__link link" href="./index.html">Студия</a>
-                  </li>
-                  <li class="header__item header__item--dark header__item--current">
-                    <a class="header__link link" href="./portfolio.html">Портфолио</a>
-                  </li>
-                  <li class="header__item header__item--dark">
-                    <a class="header__link link" href="">Контакты</a>
-                  </li>
-                </ul>
-              </nav>
-              <ul class="header__list list">
-                <li class="header__item">
-                  <a class="header__link link" href="mailto:info@devstudio.com">
-                    <svg 
-                       class="header__icon" width="16" height="12">
-                      <use href="./images/svg/symbol-defs.svg#icon-envelope"></use>
-                    </svg>
-                    info@devstudio.com</a>
-                </li>
-                <li class="header__item">
-                  <a class="header__link link" href="tel:+380961111111">
-                    <svg class="header__icon" width="10" height="16">
-                      <use href="./images/svg/symbol-defs.svg#icon-smartphone"></use>
-                    </svg>
-                    +38 096 111 11 11</a>
-                </li>
-              </ul>
-            </div>
-          </header>
+      <header class="header">
+        <div class="header__container container">
+          <nav class="nav header__nav">
+            <a class="logo header__logo link" href="./" lang="en"><span class="logo__web">Web</span>Studio</a>
+            <ul class="nav__list list">
+              <li class="nav__item nav__item nav__item--dark ">
+                <a class="nav__link link" href="./index.html">Студия</a>
+              </li>
+              <li class="nav__item nav__item nav__item--dark nav__item--current">
+                <a class="nav__link link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="nav__item nav__item nav__item--dark">
+                <a class="nav__link link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="contact list">
+            <li class="contact__item">
+              <a class="contact__link link" href="mailto:info@devstudio.com">
+                <svg class="contact__icon contact__icon--tablet" width="14" height="10">
+                  <use href="./images/svg/symbol-defs.svg#icon-envelope"></use>
+                </svg>
+                <svg class="contact__icon contact__icon--desktop" width="16" height="12">
+                  <use href="./images/svg/symbol-defs.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com</a>
+            </li>
+            <li class="contact__item">
+              <a class="contact__link link" href="tel:+380961111111">
+                <svg class="contact__icon contact__icon--tablet" width="10" height="14">
+                  <use href="./images/svg/symbol-defs.svg#icon-smartphone"></use>
+                </svg>
+                <svg class="contact__icon contact__icon--desktop" width="10" height="16">
+                  <use href="./images/svg/symbol-defs.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a>
+            </li>
+          </ul>
+          <button class="button-menu button" type="button">
+            <svg class="button-menu__icon" width="24" height="16">
+              <use href="./images/svg/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
+        </div>
+      </header>
         <main>
             <section class="work section">
                 <div class="container">
@@ -229,10 +239,12 @@
               </div>
             </section>
         </main>
+        <!-- FOOTER -->
         <footer class="footer">
           <div class="footer__container container">
+            <div class="footer__active">
             <div class="footer__address">
-              <a class="logo logo--darktheme link" href="./" lang="en"><span class="logo__web">Web</span>Studio</a>
+              <a class="logo footer__logo logo--darktheme link" href="./" lang="en"><span class="logo__web">Web</span>Studio</a>
               <address class="address">
                 <ul class="address__list list">
                   <li class="address__item">
@@ -248,7 +260,6 @@
                 </ul>
               </address>
             </div>
-            <div class="footer__active">
               <div class="footer__network">
                 <strong class="footer__title">присоединяйтесь</strong>
                 <ul class="network list">
@@ -298,6 +309,7 @@
                   </li>
                 </ul>
               </div>
+            </div>
               <div class="footer__mail">
                 <strong class="footer__title">Подпишитесь на рассылку</strong>
                 <form class="mail-form">
@@ -316,7 +328,6 @@
                   </button>
                 </form>
               </div>
-            </div>
           </div>
         </footer>
     </body>

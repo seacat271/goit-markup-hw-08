@@ -27,8 +27,6 @@
     }
 }
 
-
-
 .form__label {
     margin-bottom: 4px;
 
@@ -43,13 +41,11 @@
     height: 40px;
 
     font-family: inherit;
-    font-size: 14px;
     line-height: 1.17;
     letter-spacing: 0.01em;
     
     @extend %bordered;
-    border-color: rgba(33, 33, 33, 0.2);
-   
+    border-color: rgba(33, 33, 33, 0.2);   
 
     outline: none;
     resize: none;
@@ -65,9 +61,7 @@
         border-color: getColor("attention");
     }
 
-
     &::placeholder {
-        font-size: 14px;
         letter-spacing: 0.01em;
         line-height: 1.14;
     
@@ -96,7 +90,6 @@
 .license__label {
     @extend %flex-centered;
 }
-
 
 .license__choice {
     display: inline-flex;
@@ -136,8 +129,15 @@
 }
 
 .license__label {
-    font-size: 14px;
-    line-height: 1.71;
+   
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+   
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        line-height: 1.71;
+    }
 }
 
 .license__link {

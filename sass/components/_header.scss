@@ -1,7 +1,20 @@
 .header {
-    padding-top: 25px;
-    padding-bottom: 25px;
+    
 
+    @media screen and (max-width: 767px) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        padding-top: 21px;
+        padding-bottom: 21px;
+    }
+    @media screen and (min-width: 1200px){
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+  
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: #ECECEC;
@@ -12,60 +25,70 @@
     align-items: center;
     justify-content: space-between;
 }
+   
+.header__nav {
 
-.header__nav,
-.header__list {
-    display: flex;
-    align-items: center;
-}
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: 84px;
+    }
 
-.header__item {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-
-    &:not(:last-child) {
-        margin-right: 50px;
+    @media screen and (min-width: 1200px) {
+    margin-right: 305px;
     }
 }
 
-.header__item--dark {
-    position: relative;
-
-    color: getColor("title");
+.header__contact {
+    @media screen and (max-width: 767px) {
+        margin-bottom: 64px;
+    }
 }
 
-.header__item--current {
-    color: getColor("attention");
+.header__menu {
+    visibility: hidden;
+    opacity: 0;
 
-    &::after {
-        width: 100%;
-        height: 4px;
-    
+    @include transition(visibility, opacity);
+
+    @media screen and (max-width: 767px) {
+        background-color: getColor("basic-background");
+        padding: 48px 40px;
         position: absolute;
-        bottom: -34px;
+        top: 0;
         left: 0;
-        content: "";
+        width: 100%;
     
-        border-radius: 2px;
-        background-color: getColor("attention");
+        &.is-open {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+   
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        visibility: visible;
+        opacity: 1;
     }
 }
 
-.header__icon {
-    margin-right: 10px;
-
-    fill: currentColor;
+.header__network {
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
 }
 
-.header__link {
-    @include transition (color);
 
-    &:hover,
-    &:focus {
-        color: getColor("attention");
-    }    
-}
+
+
+
+
+
+
+
+
+
+
 
 
