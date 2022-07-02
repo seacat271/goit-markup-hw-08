@@ -131,16 +131,19 @@
 .button-menu {
     width: 40px;
     height: 40px;
+    @extend %flex-centered;
 
         @media screen and (min-width: 768px) {
             display: none;
     }
 }
-.button-menu__icon {
-    fill: getColor("logo");
+.button-menu {
 
-    .button-menu:hover & {
-        fill: getColor("attention");
+    &:hover {
+        .button-menu__icon--close, 
+        .button-menu__icon--open  {
+            fill: getColor("attention");
+        } 
     }
 }
 
@@ -152,21 +155,23 @@
 }
 
 .button-menu.is-open .button-menu__icon--close{
-    visibility: visible;
-    opacity: 1;
-    @include transition(visibility);
+    display: block;
 }
 
 .button-menu.is-open .button-menu__icon--open{
-    visibility: hidden;
-    opacity: 0;
-    @include transition(visibility);
+   display: none;
 }
 .button-menu .button-menu__icon--close {
-    visibility: hidden;
-    opacity: 0;
+    display: none;
 }
 
+.button-menu__icon--close {
+    fill: getColor("title");
+}
+
+.button-menu__icon--open {
+    fill: getColor("logo");
+}
 
 
 

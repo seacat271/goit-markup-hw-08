@@ -4,7 +4,7 @@
   border-radius: 4px;
 }
 
-.license__label, .client__link, .network__link, .button-close, .button-submit--stylish {
+.license__label, .client__link, .network__link, .button-menu, .button-close, .button-submit--stylish {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -508,10 +508,8 @@ body {
   }
 }
 
-.button-menu__icon {
-  fill: #000000;
-}
-.button-menu:hover .button-menu__icon {
+.button-menu:hover .button-menu__icon--close,
+.button-menu:hover .button-menu__icon--open {
   fill: #2196F3;
 }
 
@@ -523,24 +521,23 @@ body {
 }
 
 .button-menu.is-open .button-menu__icon--close {
-  visibility: visible;
-  opacity: 1;
-  transition-property: visibility;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
 }
 
 .button-menu.is-open .button-menu__icon--open {
-  visibility: hidden;
-  opacity: 0;
-  transition-property: visibility;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  display: none;
 }
 
 .button-menu .button-menu__icon--close {
-  visibility: hidden;
-  opacity: 0;
+  display: none;
+}
+
+.button-menu__icon--close {
+  fill: #212121;
+}
+
+.button-menu__icon--open {
+  fill: #000000;
 }
 
 .network {
@@ -653,24 +650,21 @@ body {
 }
 
 .header__menu {
-  visibility: hidden;
-  opacity: 0;
-  transition-property: visibility, opacity;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  display: none;
 }
 @media screen and (max-width: 767px) {
   .header__menu {
-    background-color: #FFFFFF;
+    width: 100%;
     padding: 48px 40px;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    bottom: 0;
+    right: 0;
+    background-color: #FFFFFF;
   }
   .header__menu.is-open {
-    visibility: visible;
-    opacity: 1;
+    display: block;
   }
 }
 @media screen and (min-width: 768px) {
@@ -678,8 +672,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    visibility: visible;
-    opacity: 1;
   }
 }
 
@@ -745,7 +737,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .nav__link:hover, .nav__link:focus {
     transition-property: color;
     transition-duration: 250ms;

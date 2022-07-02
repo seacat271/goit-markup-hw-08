@@ -44,32 +44,30 @@
 }
 
 .header__menu {
-    visibility: hidden;
-    opacity: 0;
-
-    @include transition(visibility, opacity);
+   display: none;
 
     @media screen and (max-width: 767px) {
-        background-color: getColor("basic-background");
+        width: 100%;      
         padding: 48px 40px;
+
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
-    
+        bottom: 0;
+        right: 0;
+
+        background-color: getColor("basic-background");
+        
         &.is-open {
-            visibility: visible;
-            opacity: 1;
+            display: block;
         }
     }
-   
 
     @media screen and (min-width: 768px) {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        visibility: visible;
-        opacity: 1;
+         
     }
 }
 
