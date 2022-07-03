@@ -92,13 +92,13 @@
 }
 
 .license__choice {
+    width: 16px;
+    height: 15px;
+
     display: inline-flex;
     justify-content: center;
     align-items: center;
    
-    width: 16px;
-    height: 15px;
-
     // box-sizing: border-box;
     background-color: getColor("basic-background");
     border-radius: 2px;

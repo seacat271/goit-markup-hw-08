@@ -319,6 +319,16 @@ body {
   background-color: #FFFFFF;
 }
 
+.body.modal-open {
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -644,27 +654,32 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  .header__contact {
+  .contact {
     margin-bottom: 64px;
   }
 }
 
 .header__menu {
   display: none;
+  background-color: #FFFFFF;
 }
 @media screen and (max-width: 767px) {
   .header__menu {
     width: 100%;
+    height: 100vh;
     padding: 48px 40px;
     position: absolute;
+    z-index: 10;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: #FFFFFF;
+    overflow-y: scroll;
   }
   .header__menu.is-open {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
 @media screen and (min-width: 768px) {
@@ -673,6 +688,28 @@ body {
     align-items: center;
     justify-content: space-between;
   }
+}
+
+.header__network {
+  display: flex;
+}
+
+.header__item {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: #2196F3;
+}
+.header__item:not(:last-child) {
+  margin-right: 10px;
+}
+.header__item:not(:last-child)::after {
+  content: "";
+  margin-left: 10px;
+  width: 1px;
+  height: 100%;
+  outline: 1px solid rgba(33, 33, 33, 0.2);
 }
 
 @media screen and (min-width: 768px) {
@@ -793,7 +830,28 @@ body {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 321px) {
+  .contact__item:last-child {
+    margin-bottom: 32px;
+    font-size: 26px;
+    color: #2196F3;
+  }
+}
+@media screen and (min-width: 322px) and (max-width: 341px) {
+  .contact__item:last-child {
+    margin-bottom: 32px;
+    font-size: 26px;
+    color: #2196F3;
+  }
+}
+@media screen and (min-width: 342px) and (max-width: 373px) {
+  .contact__item:last-child {
+    margin-bottom: 32px;
+    font-size: 30px;
+    color: #2196F3;
+  }
+}
+@media screen and (min-width: 374px) and (max-width: 768px) {
   .contact__item:last-child {
     margin-bottom: 32px;
     font-size: 34px;
@@ -823,14 +881,41 @@ body {
 .hero {
   padding-top: 118px;
   padding-bottom: 118px;
-  max-width: 1600px;
+  max-width: 480px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-color: #2F303A;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/background-img-450.jpg);
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/background-img-900.jpg);
+  }
+}
+@media screen and (min-width: 480px) {
+  .hero {
+    max-width: 768px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/background-img-768.jpg);
+  }
+}
+@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/background-img-1536.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    max-width: 1600px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/background-img-1600.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/background-img-3200.jpg);
+  }
 }
 
 .hero__container {
@@ -985,6 +1070,13 @@ body {
   padding-top: 30px;
   padding-bottom: 24px;
   text-align: center;
+  border-radius: inherit;
+  background-color: #FFFFFF;
+}
+@media screen and (min-width: 1200px) {
+  .staff__container {
+    padding-bottom: 30px;
+  }
 }
 
 .staff__name {
@@ -1187,11 +1279,13 @@ body {
 .backdrop {
   width: 100%;
   height: 100%;
+  padding: 93px 15px;
   position: fixed;
   top: 0;
   left: 0;
   visibility: visible;
   background-color: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
   transition-property: opacity, visibility;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1204,14 +1298,9 @@ body {
 }
 
 .modal {
-  min-width: 450px;
-  min-height: 609px;
   padding: 40px;
   box-sizing: border-box;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  transform: scale(1);
   background-color: #FFFFFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -1219,14 +1308,25 @@ body {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 558px) {
   .modal {
-    min-width: 528px;
-    min-height: 581px;
+    width: 100%;
+    max-width: 528px;
+    height: 100%;
+    max-height: 581px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
   }
 }
 .is-hidden > .modal {
-  transform: translate(-50%, -50%) scale(1.5);
+  transform: scale(1.5);
+}
+@media screen and (min-width: 558px) {
+  .is-hidden > .modal {
+    transform: translate(-50%, -50%) scale(1.5);
+  }
 }
 
 .form__title {
@@ -1304,11 +1404,11 @@ body {
 }
 
 .license__choice {
+  width: 16px;
+  height: 15px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 16px;
-  height: 15px;
   background-color: #FFFFFF;
   border-radius: 2px;
   outline: #212121 2px solid;
@@ -1369,6 +1469,11 @@ body {
 }
 .work__item:hover, .work__item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+@media screen and (max-width: 767px) {
+  .work__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 @media screen and (min-width: 768px) {
   .work__item {

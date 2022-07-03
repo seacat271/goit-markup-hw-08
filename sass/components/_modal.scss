@@ -1,19 +1,22 @@
 .modal {
-    min-width: 450px;
-    min-height: 609px;
-
-    @media screen and (min-width: 1200px) {
-        min-width: 528px;
-        min-height: 581px;
-    }
     padding: 40px;
 
     box-sizing: border-box;
-    position: absolute;
-    top: 50%;
-    left: 50%;
 
-    transform: translate(-50%, -50%) scale(1.0);
+
+
+    @media screen and (min-width: 558px) {
+        width: 100%;
+        max-width: 528px;
+        height: 100%;
+        max-height: 581px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1.0);
+    }
+
+    transform: scale(1.0);
 
     background-color: getColor("basic-background");
 
@@ -25,8 +28,18 @@
 
     @include transition (transform);
     
+
+
     .is-hidden>& {
-        transform: translate(-50%, -50%) scale(1.5);  
+        transform: scale(1.5); 
+
+        @media screen and (min-width: 558px) {
+
+            transform: translate(-50%, -50%) scale(1.5);
+        }
+
+
+     
     }
 }
 

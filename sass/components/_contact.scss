@@ -48,7 +48,31 @@
 .contact__item {
 
     &:last-child {
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: 321px) {
+            margin-bottom: 32px;
+
+            font-size: 26px;
+
+            color: getColor("attention");
+        }
+
+        @media screen and (min-width: 322px) and (max-width: 341px) {
+            margin-bottom: 32px;
+        
+            font-size: 26px;
+    
+            color: getColor("attention");
+        }
+
+        @media screen and (min-width: 342px) and (max-width: 373px) {
+            margin-bottom: 32px;
+        
+            font-size: 30px;
+    
+            color: getColor("attention");
+        }
+
+        @media screen and (min-width: 374px) and (max-width: 768px) {
             margin-bottom: 32px;
         
             font-size: 34px;

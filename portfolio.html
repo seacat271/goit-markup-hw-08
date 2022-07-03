@@ -27,47 +27,98 @@
     <body>
       <header class="header">
         <div class="header__container container">
-          <nav class="nav header__nav">
-            <a class="logo header__logo link" href="./" lang="en"><span class="logo__web">Web</span>Studio</a>
-            <ul class="nav__list list">
-              <li class="nav__item nav__item nav__item--dark ">
-                <a class="nav__link link" href="./index.html">Студия</a>
-              </li>
-              <li class="nav__item nav__item nav__item--dark nav__item--current">
-                <a class="nav__link link" href="./portfolio.html">Портфолио</a>
-              </li>
-              <li class="nav__item nav__item nav__item--dark">
-                <a class="nav__link link" href="">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-          <ul class="contact list">
-            <li class="contact__item">
-              <a class="contact__link link" href="mailto:info@devstudio.com">
-                <svg class="contact__icon contact__icon--tablet" width="14" height="10">
-                  <use href="./images/svg/symbol-defs.svg#icon-envelope"></use>
-                </svg>
-                <svg class="contact__icon contact__icon--desktop" width="16" height="12">
-                  <use href="./images/svg/symbol-defs.svg#icon-envelope"></use>
-                </svg>
-                info@devstudio.com</a>
-            </li>
-            <li class="contact__item">
-              <a class="contact__link link" href="tel:+380961111111">
-                <svg class="contact__icon contact__icon--tablet" width="10" height="14">
-                  <use href="./images/svg/symbol-defs.svg#icon-smartphone"></use>
-                </svg>
-                <svg class="contact__icon contact__icon--desktop" width="10" height="16">
-                  <use href="./images/svg/symbol-defs.svg#icon-smartphone"></use>
-                </svg>
-                +38 096 111 11 11</a>
-            </li>
-          </ul>
-          <button class="button-menu button" type="button">
-            <svg class="button-menu__icon" width="24" height="16">
-              <use href="./images/svg/icons.svg#icon-menu"></use>
+          <a class="logo header__logo link" href="./" lang="en"><span class="logo__web">Web</span>Studio</a>
+          <button 
+            class="button-menu button" 
+            type="button" 
+            data-menu-button
+            aria-expanded="false"
+            aria-controls="header-menu">
+            <svg 
+              class="button-menu__icon" 
+              width="24" 
+              height="16"
+              aria-label="переключатель мобильного меню">
+              <use class="button-menu__icon--open" href="./images/svg/icons.svg#icon-menu"></use>
+            </svg>
+            <svg 
+              class="button-menu__icon" 
+              width="19" 
+              height="19"
+              aria-label="переключатель мобильного меню">
+              <use class="button-menu__icon--close" href="./images/svg/icons.svg#icon-close_24px-1"></use>
             </svg>
           </button>
+          <div class="header__menu" id="header-menu" data-menu>
+            <!-- <div class="header__menu-container"> -->
+              <nav class="nav header__nav">       
+                <ul class="nav__list list">
+                  <li class="nav__item nav__item nav__item--dark">
+                    <a class="nav__link link" href="./index.html">Студия</a>
+                  </li>
+                  <li class="nav__item nav__item nav__item--dark nav__item--current">
+                    <a class="nav__link link" href="./portfolio.html">Портфолио</a>
+                  </li>
+                  <li class="nav__item nav__item nav__item--dark">
+                    <a class="nav__link link" href="">Контакты</a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="header__contact">
+                <ul class="contact list">
+                  <li class="contact__item">
+                    <a class="contact__link link" href="mailto:info@devstudio.com">
+                      <svg class="contact__icon contact__icon--tablet" width="14" height="10">
+                        <use href="./images/svg/symbol-defs.svg#icon-envelope"></use>
+                      </svg>
+                      <svg class="contact__icon contact__icon--desktop" width="16" height="12">
+                        <use href="./images/svg/symbol-defs.svg#icon-envelope"></use>
+                      </svg>
+                    info@devstudio.com</a>
+                  </li>
+                  <li class="contact__item">
+                    <a class="contact__link link" href="tel:+380961111111">
+                      <svg class="contact__icon contact__icon--tablet" width="10" height="14">
+                        <use href="./images/svg/symbol-defs.svg#icon-smartphone"></use>
+                      </svg>
+                      <svg class="contact__icon contact__icon--desktop" width="10" height="16">
+                        <use href="./images/svg/symbol-defs.svg#icon-smartphone"></use>
+                      </svg>
+                    +38 096 111 11 11</a>
+                  </li>
+                </ul>
+                <ul class="header__network list">
+                <li class="header__item">
+                  <a  class="header__link link" 
+                      href="https://www.instagram.com" 
+                      target="_blank" 
+                      rel="noreferer noopener">Instagram
+                  </a>
+                </li>
+                <li class="header__item">
+                  <a  class="header__link link" 
+                      href="https://twitter.com" 
+                      target="_blank" 
+                      rel="noreferer noopener">Twitter
+                  </a>
+                </li>
+                <li class="header__item">
+                  <a  class="header__link link" 
+                      href="https://uk-ua.facebook.com" 
+                      target="_blank" 
+                      rel="noreferer noopener">Facebook
+                  </a>
+                </li>
+                <li class="header__item">
+                  <a  class="header__link link" 
+                      href="https://www.linkedin.com" 
+                      target="_blank" 
+                      rel="noreferer noopener">Linkedin
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </header>
         <main>
@@ -95,7 +146,7 @@
                         <li class="work__item">
                             <a href="" class="link">
                               <div class="work__thumb">
-                                <img class="work__image" src="./images/portfolio/techno.jpg" alt="сайт в интернете" width="370" >
+                                <img class="work__image" src="./images/portfolio/techno-450.jpg" alt="сайт в интернете" width="370" >
                                 <div class="work__overlay">
                                   <p class="work__description">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -111,7 +162,7 @@
                         <li class="work__item">
                           <a href="" class="link">
                             <div class="work__thumb">
-                              <img class="work__image" src="./images/portfolio/game.jpg" alt="постер команды" width="370" >
+                              <img class="work__image" src="./images/portfolio/game-450.jpg" alt="постер команды" width="370" >
                               <div class="work__overlay">
                                 <p class="work__description">
                                   Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -126,7 +177,7 @@
                         </li>
                         <li class="work__item">
                           <div class="work__thumb">
-                            <img class="work__image" src="./images/portfolio/seafood.jpg" alt="логотип ресторана" width="370" >
+                            <img class="work__image" src="./images/portfolio/seafood-450.jpg" alt="логотип ресторана" width="370" >
                             <div class="work__overlay">
                               <p class="work__description">
                                 Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -141,7 +192,7 @@
                         <li class="work__item">
                           <a href="" class="link">
                             <div class="work__thumb">
-                              <img class="work__image" src="./images/portfolio/headphone.jpg" alt="наушники" width="370">
+                              <img class="work__image" src="./images/portfolio/headphone-450.jpg" alt="наушники" width="370">
                               <div class="work__overlay">
                                 <p class="work__description">
                                   Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -157,7 +208,7 @@
                         <li class="work__item">
                           <a href="" class="link">
                             <div class="work__thumb">
-                              <img class="work__image" src="./images/portfolio/boxes.jpg" alt="две коробки" width="370" >
+                              <img class="work__image" src="./images/portfolio/boxes-450.jpg" alt="две коробки" width="370" >
                               <div class="work__overlay">
                                 <p class="work__description">
                                   Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -174,7 +225,7 @@
                         <li class="work__item">
                           <a href="" class="link">
                             <div class="work__thumb">
-                              <img class="work__image" src="./images/portfolio/display.jpg" alt="дисплей" width="370" >
+                              <img class="work__image" src="./images/portfolio/display-450.jpg" alt="дисплей" width="370" >
                               <div class="work__overlay">
                                 <p class="work__description">
                                   Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -190,7 +241,7 @@
                         <li class="work__item">
                           <a href="" class="link">
                             <div class="work__thumb">
-                              <img class="work__image" src="./images/portfolio/book.jpg" alt="открытая книга" width="370" >
+                              <img class="work__image" src="./images/portfolio/book-450.jpg" alt="открытая книга" width="370" >
                               <div class="work__overlay">
                                 <p class="work__description">
                                   Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -206,7 +257,7 @@
                         <li class="work__item">
                           <a href="" class="link">
                             <div class="work__thumb">
-                              <img class="work__image" src="./images/portfolio/tag.jpg" alt="бирка" width="370" >
+                              <img class="work__image" src="./images/portfolio/tag-450.jpg" alt="бирка" width="370" >
                               <div class="work__overlay">
                                 <p class="work__description">
                                   Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -222,7 +273,7 @@
                         <li class="work__item">
                           <a href="" class="link">
                             <div class="work__thumb">
-                              <img class="work__image" src="./images/portfolio/business.jpg" alt="ноутбук" width="370" >
+                              <img class="work__image" src="./images/portfolio/business-450.jpg" alt="ноутбук" width="370" >
                               <div class="work__overlay">
                                 <p class="work__description">
                                   Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -330,5 +381,8 @@
               </div>
           </div>
         </footer>
+        <script src="./js/mobile-menu.js"></script>
+        <script src="./js/modal.js"></script>
+        <script src="./js/modal-submit.js"></script>
     </body>
 </html>
