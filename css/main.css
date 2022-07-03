@@ -1308,22 +1308,27 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-@media screen and (min-width: 558px) {
+.is-hidden > .modal {
+  transform: scale(1.5);
+}
+@media screen and (min-width: 600px) {
   .modal {
     width: 100%;
     max-width: 528px;
-    height: 100%;
     max-height: 581px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -25%) scale(1);
+  }
+  .is-hidden > .modal {
+    transform: translate(-50%, -25%) scale(1.5);
   }
 }
-.is-hidden > .modal {
-  transform: scale(1.5);
-}
-@media screen and (min-width: 558px) {
+@media screen and (min-width: 1200px) {
+  .modal {
+    transform: translate(-50%, -50%) scale(1);
+  }
   .is-hidden > .modal {
     transform: translate(-50%, -50%) scale(1.5);
   }
@@ -1477,6 +1482,7 @@ img {
 }
 @media screen and (min-width: 768px) {
   .work__item {
+    min-width: 270px;
     flex-basis: calc((100% - 30px) / 2);
   }
 }
