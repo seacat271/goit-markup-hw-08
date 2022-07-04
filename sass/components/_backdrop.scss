@@ -13,7 +13,6 @@
     overflow-y: scroll;
 
     @include transition(opacity, visibility);
-
 }
 
 .backdrop.is-hidden {

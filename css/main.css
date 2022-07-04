@@ -462,8 +462,8 @@ img {
 }
 
 .radio-button {
-  display: flex;
   margin-bottom: 40px;
+  display: flex;
 }
 @media screen and (max-width: 767px) {
   .radio-button {
@@ -592,7 +592,7 @@ img {
   background-color: #2196F3;
 }
 
-.network__link--mobile .network__link--mobile {
+.network__link--mobile {
   display: inline-block;
   font-size: 18px;
   font-weight: 500;
@@ -600,11 +600,11 @@ img {
   letter-spacing: 0.02em;
   color: #2196F3;
 }
-.network__link--mobile .network__link--mobile:hover, .network__link--mobile .network__link--mobile:focus {
+.network__link--mobile:hover, .network__link--mobile:focus {
   color: #2196F3;
   background-color: transparent;
 }
-.network__link--mobile .network__link--mobile::after {
+.network__link--mobile::after {
   content: "";
   width: 2px;
   height: 100%;
@@ -844,32 +844,23 @@ img {
   }
 }
 
-@media screen and (max-width: 321px) {
-  .contact__item:last-child {
-    margin-bottom: 32px;
-    font-size: 26px;
-    color: #2196F3;
-  }
+.contact__item:last-child {
+  margin-bottom: 32px;
+  color: #2196F3;
 }
 @media screen and (min-width: 322px) and (max-width: 341px) {
   .contact__item:last-child {
-    margin-bottom: 32px;
     font-size: 26px;
-    color: #2196F3;
   }
 }
 @media screen and (min-width: 342px) and (max-width: 373px) {
   .contact__item:last-child {
-    margin-bottom: 32px;
     font-size: 30px;
-    color: #2196F3;
   }
 }
 @media screen and (min-width: 374px) and (max-width: 768px) {
   .contact__item:last-child {
-    margin-bottom: 32px;
     font-size: 34px;
-    color: #2196F3;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -1266,6 +1257,10 @@ img {
   color: #FFFFFF;
   background-color: transparent;
 }
+.mail-form__input::placeholder {
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+}
 @media screen and (max-width: 1199px) {
   .mail-form__input {
     margin-bottom: 20px;
@@ -1284,10 +1279,6 @@ img {
     margin-right: auto;
     margin-left: auto;
   }
-}
-.mail-form__input::placeholder {
-  line-height: 1.25;
-  color: rgba(255, 255, 255, 0.6);
 }
 
 .backdrop {

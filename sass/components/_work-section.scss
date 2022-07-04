@@ -1,5 +1,4 @@
 .work__list {
-    
     @media screen and (min-width: 768px) {
         display: flex;
         flex-wrap: wrap;
@@ -37,7 +36,7 @@
             display: flex;
             flex-direction: column;
         }
-}
+    }
 
     // @media screen and (min-width: 768px) and (max-width: 1200px) {
     //     &:first-child .work__container {
@@ -56,7 +55,6 @@
     @media screen and (min-width: 768px) and (max-width: 1200px) {
         flex-grow: 1;
     }
-    
 }
 
 .work__thumb {

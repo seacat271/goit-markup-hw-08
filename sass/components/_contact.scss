@@ -13,10 +13,8 @@
     @media screen and (min-width: 768px) {
         font-size: 12px;
         line-height: 1.14;
-
     }
 
-   
     @media screen and (min-width: 1200px) {
         display: flex;
         align-items: center;
@@ -27,6 +25,7 @@
 
 .contact__icon--desktop {
     display: none;
+
     @media screen and (min-width: 1200px) {
         display:initial;
         margin-right: 10px;
@@ -46,46 +45,25 @@
 }
 
 .contact__item {
-
     &:last-child {
-        @media screen and (max-width: 321px) {
-            margin-bottom: 32px;
-
-            font-size: 26px;
-
-            color: getColor("attention");
-        }
+        margin-bottom: 32px;
+        color: getColor("attention");
 
         @media screen and (min-width: 322px) and (max-width: 341px) {
-            margin-bottom: 32px;
-        
             font-size: 26px;
-    
-            color: getColor("attention");
         }
 
         @media screen and (min-width: 342px) and (max-width: 373px) {
-            margin-bottom: 32px;
-        
             font-size: 30px;
-    
-            color: getColor("attention");
         }
 
         @media screen and (min-width: 374px) and (max-width: 768px) {
-            margin-bottom: 32px;
-        
             font-size: 34px;
-    
-            color: getColor("attention");
         }
     }
 
-
     &:not(:last-child) {
 
-
-       
         @media screen and (min-width: 768px) and (max-width: 1199px) {
             margin-bottom: 10px;
         }
@@ -104,46 +82,3 @@
         color: getColor("attention");
     }    
 }
-
-
-// // .contact {
-// //     display: flex;
-// //     align-items: center;
-// // }
-
-// .contact__item {
-//     margin-bottom: 32px;
-
-//     font-size: 34px;
-//     font-weight: 500;
-//     line-height: 1.17;
-//     letter-spacing: 0.02em;
-
-//     color: getColor("attention");
-
-
-
-//     // }
-
-//     &:last-child {
-//         font-size: 24px;
-//         color: getColor("basic");
-//         margin-bottom: 64px;
-//     }
-// }
-
-// .contact__link {
-    
-
-   
-// }
-
-
-
-
-
-// .contact__icon {
-//     margin-right: 10px;
-
-//     fill: currentColor;
-// }
