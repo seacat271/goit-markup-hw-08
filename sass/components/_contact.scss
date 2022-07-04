@@ -46,20 +46,23 @@
 
 .contact__item {
     &:last-child {
-        margin-bottom: 32px;
-        color: getColor("attention");
 
-        @media screen and (min-width: 322px) and (max-width: 341px) {
-            font-size: 26px;
-        }
+        @media screen and (max-width: 768px) {
+            margin-bottom: 32px;
+            color: getColor("attention");
 
-        @media screen and (min-width: 342px) and (max-width: 373px) {
-            font-size: 30px;
-        }
+            @media screen and (max-width: 341px) {
+                font-size: 26px;
+            }
+        
+            @media screen and (min-width: 342px) and (max-width: 373px) {
+                font-size: 30px;
+            }
 
-        @media screen and (min-width: 374px) and (max-width: 768px) {
-            font-size: 34px;
-        }
+            @media screen and (min-width: 374px) {
+                font-size: 34px;
+            }
+        } 
     }
 
     &:not(:last-child) {
