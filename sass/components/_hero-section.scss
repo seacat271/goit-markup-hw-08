@@ -1,6 +1,7 @@
 .hero {
     padding-top: 118px;
     padding-bottom: 118px;
+
     max-width: 480px;
 
     margin-left: auto;
@@ -73,6 +74,11 @@
                 ),
                 url(../images/background-img-3200.jpg);
         }
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 200px;
+        padding-bottom: 200px;
     }
 }
 
